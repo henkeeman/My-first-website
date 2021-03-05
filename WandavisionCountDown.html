@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+
+<script>
+  var targetDate = 5 * 24 * 60 * 60 + 9 * 60 * 60;
+
+
+  var x = setInterval(function() {
+
+  var currentDate = new Date();
+  var weekday = 0;
+
+    if (currentDate.getDay() == 1) {
+        weekday = 1;
+    }
+
+    if (currentDate.getDay() == 2) {
+        weekday = 2;
+    }
+    if (currentDate.getDay() == 3) {
+        weekday = 3;
+    }
+    if (currentDate.getDay() == 4) {
+        weekday = 4;
+    }
+    if (currentDate.getDay() == 5) {
+        weekday = 5;
+    }
+    if (currentDate.getDay() == 6) {
+        weekday = 6;
+    }
+    if (currentDate.getDay() == 0) {
+        weekday = 7;
+    }
+
+
+
+  
+  var newNow = weekday * 24 * 60 * 60 + currentDate.getHours() * 60 * 60 + currentDate.getMinutes() * 60 + currentDate.getSeconds();
+
+  var newDistance;
+  if (currentDate.getHours() >= 9 && weekday >= 5)
+  {
+    newDistance = 604800 - (currentDate - targetDate);
+  }
+  else
+  newDistance = targetDate - newNow;
+
+
+ var days = Math.floor(newDistance / (60 * 60 * 24))
+ var hours = Math.floor((newDistance % (60 * 60 * 24)) / (60 * 60))
+ var minutes = Math.floor((newDistance % (60 * 60)) / (60))
+ var seconds = Math.floor((newDistance % (60)))
+ 
+
+ document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+  + minutes + "m " + seconds + "s ";
+
+  
+  
+  
+
+  
+}, 1000);
+
+ </script>
+<style>
+    @import "compass/css3";
+    h1 {
+    
+        color: red;
+        font-style: italic;
+        font-size: 120px;
+        position: absolute;
+        left: 715px;
+        top: 560px;
+    }
+    h2 {
+    
+        color: rgb(218, 218, 218);
+        font-family: 'Brush Script MT';
+        font-size: 40px;
+        position: absolute;
+        left: 1225px;
+        top: 550px;
+    }
+    p  {
+        color: rgb(243, 42, 7);
+        font-size: 70px;
+        position: absolute;
+        left: 700px;
+        top: 350px;
+        
+    }
+    h3{    
+      position: absolute;
+        left: 570px;
+        top: 610px;
+
+
+    }
+    body{
+        background-color: rgb(53, 53, 53);
+    }
+    img{
+
+        display: block;
+        margin: 0 auto 0 auto;
+    }
+    .imgA1 {
+      z-index: 1;
+    }
+    .imgB1 {
+       z-index: -1;
+    }
+    
+    
+    body {
+  background-color: #333;
+}
+
+/* #region Main GlitchEffect */
+#container {
+  width: 70vw;
+  margin: 30vw auto;
+}
+
+h1 {
+  text-align: center;
+  color: #fff;
+  font-size: 70px;
+  letter-spacing: 8px;
+  font-family: 'Brush Script MT';
+  font-weight: 400;
+  /*Create overlap*/
+  
+  margin: 0;
+  line-height: 0;
+  /*Animation*/
+  
+  animation: glitch1 2.5s infinite;
+}
+
+h1:nth-child(2) {
+  color: #67f3da;
+  animation: glitch2 2.5s infinite;
+}
+
+h1:nth-child(3) {
+  color: #f16f6f;
+  animation: glitch3 2.5s infinite;
+}
+/*Keyframes*/
+
+@keyframes glitch1 {
+  0% {
+    transform: none;
+    opacity: 1;
+  }
+  7% {
+    transform: skew(-0.5deg, -0.9deg);
+    opacity: 0.75;
+  }
+  10% {
+    transform: none;
+    opacity: 1;
+  }
+  27% {
+    transform: none;
+    opacity: 1;
+  }
+  30% {
+    transform: skew(0.8deg, -0.1deg);
+    opacity: 0.75;
+  }
+  35% {
+    transform: none;
+    opacity: 1;
+  }
+  52% {
+    transform: none;
+    opacity: 1;
+  }
+  55% {
+    transform: skew(-1deg, 0.2deg);
+    opacity: 0.75;
+  }
+  50% {
+    transform: none;
+    opacity: 1;
+  }
+  72% {
+    transform: none;
+    opacity: 1;
+  }
+  75% {
+    transform: skew(0.4deg, 1deg);
+    opacity: 0.75;
+  }
+  80% {
+    transform: none;
+    opacity: 1;
+  }
+  100% {
+    transform: none;
+    opacity: 1;
+  }
+}
+
+@keyframes glitch2 {
+  0% {
+    transform: none;
+    opacity: 0.25;
+  }
+  7% {
+    transform: translate(-2px, -3px);
+    opacity: 0.5;
+  }
+  10% {
+    transform: none;
+    opacity: 0.25;
+  }
+  27% {
+    transform: none;
+    opacity: 0.25;
+  }
+  30% {
+    transform: translate(-5px, -2px);
+    opacity: 0.5;
+  }
+  35% {
+    transform: none;
+    opacity: 0.25;
+  }
+  52% {
+    transform: none;
+    opacity: 0.25;
+  }
+  55% {
+    transform: translate(-5px, -1px);
+    opacity: 0.5;
+  }
+  50% {
+    transform: none;
+    opacity: 0.25;
+  }
+  72% {
+    transform: none;
+    opacity: 0.25;
+  }
+  75% {
+    transform: translate(-2px, -6px);
+    opacity: 0.5;
+  }
+  80% {
+    transform: none;
+    opacity: 0.25;
+  }
+  100% {
+    transform: none;
+    opacity: 0.25;
+  }
+}
+
+@keyframes glitch3 {
+  0% {
+    transform: none;
+    opacity: 0.25;
+  }
+  7% {
+    transform: translate(2px, 3px);
+    opacity: 0.5;
+  }
+  10% {
+    transform: none;
+    opacity: 0.25;
+  }
+  27% {
+    transform: none;
+    opacity: 0.25;
+  }
+  30% {
+    transform: translate(5px, 2px);
+    opacity: 0.5;
+  }
+  35% {
+    transform: none;
+    opacity: 0.25;
+  }
+  52% {
+    transform: none;
+    opacity: 0.25;
+  }
+  55% {
+    transform: translate(5px, 1px);
+    opacity: 0.5;
+  }
+  50% {
+    transform: none;
+    opacity: 0.25;
+  }
+  72% {
+    transform: none;
+    opacity: 0.25;
+  }
+  75% {
+    transform: translate(2px, 6px);
+    opacity: 0.5;
+  }
+  80% {
+    transform: none;
+    opacity: 0.25;
+  }
+  100% {
+    transform: none;
+    opacity: 0.25;
+  }
+}
+/* #endregion */
+
+
+
+/* #region GlitchEffect Population */
+#container {
+  width: 70vw;
+  margin: 30vw auto;
+}
+
+h3 {
+  text-align: center;
+  color: #fff;
+  font-size: 40px;
+  letter-spacing: 1px;
+  font-family: 'Brush Script MT';
+  font-weight: 100;
+  /*Create overlap*/
+  
+  margin: 0;
+  line-height: 0;
+  /*Animation*/
+  
+  animation: glitch4 2.5s infinite;
+}
+
+h3:nth-child(2) {
+  color: #67f3da;
+  animation: glitch5 2.5s infinite;
+}
+
+h3:nth-child(3) {
+  color: #f16f6f;
+  animation: glitch6 2.5s infinite;
+}
+/*Keyframes*/
+
+@keyframes glitch4 {
+  0% {
+    transform: none;
+    opacity: 1;
+  }
+  7% {
+    transform: skew(-0.5deg, -0.9deg);
+    opacity: 0.75;
+  }
+  10% {
+    transform: none;
+    opacity: 1;
+  }
+  27% {
+    transform: none;
+    opacity: 1;
+  }
+  30% {
+    transform: skew(0.8deg, -0.1deg);
+    opacity: 0.75;
+  }
+  35% {
+    transform: none;
+    opacity: 1;
+  }
+  52% {
+    transform: none;
+    opacity: 1;
+  }
+  55% {
+    transform: skew(-1deg, 0.2deg);
+    opacity: 0.75;
+  }
+  50% {
+    transform: none;
+    opacity: 1;
+  }
+  72% {
+    transform: none;
+    opacity: 1;
+  }
+  75% {
+    transform: skew(0.4deg, 1deg);
+    opacity: 0.75;
+  }
+  80% {
+    transform: none;
+    opacity: 1;
+  }
+  100% {
+    transform: none;
+    opacity: 1;
+  }
+}
+
+@keyframes glitch5 {
+  0% {
+    transform: none;
+    opacity: 0.25;
+  }
+  7% {
+    transform: translate(-2px, -3px);
+    opacity: 0.5;
+  }
+  10% {
+    transform: none;
+    opacity: 0.25;
+  }
+  27% {
+    transform: none;
+    opacity: 0.25;
+  }
+  30% {
+    transform: translate(-5px, -2px);
+    opacity: 0.5;
+  }
+  35% {
+    transform: none;
+    opacity: 0.25;
+  }
+  52% {
+    transform: none;
+    opacity: 0.25;
+  }
+  55% {
+    transform: translate(-5px, -1px);
+    opacity: 0.5;
+  }
+  50% {
+    transform: none;
+    opacity: 0.25;
+  }
+  72% {
+    transform: none;
+    opacity: 0.25;
+  }
+  75% {
+    transform: translate(-2px, -6px);
+    opacity: 0.5;
+  }
+  80% {
+    transform: none;
+    opacity: 0.25;
+  }
+  100% {
+    transform: none;
+    opacity: 0.25;
+  }
+}
+
+@keyframes glitch6 {
+  0% {
+    transform: none;
+    opacity: 0.25;
+  }
+  7% {
+    transform: translate(2px, 3px);
+    opacity: 0.5;
+  }
+  10% {
+    transform: none;
+    opacity: 0.25;
+  }
+  27% {
+    transform: none;
+    opacity: 0.25;
+  }
+  30% {
+    transform: translate(5px, 2px);
+    opacity: 0.5;
+  }
+  35% {
+    transform: none;
+    opacity: 0.25;
+  }
+  52% {
+    transform: none;
+    opacity: 0.25;
+  }
+  55% {
+    transform: translate(5px, 1px);
+    opacity: 0.5;
+  }
+  50% {
+    transform: none;
+    opacity: 0.25;
+  }
+  72% {
+    transform: none;
+    opacity: 0.25;
+  }
+  75% {
+    transform: translate(2px, 6px);
+    opacity: 0.5;
+  }
+  80% {
+    transform: none;
+    opacity: 0.25;
+  }
+  100% {
+    transform: none;
+    opacity: 0.25;
+  }
+}
+/* #endregion GlitchEffect Population */
+
+
+
+    </style>
+    
+    <audio controls>
+        <source src="audio/Wanda's Theme (End Credits from WandaVision) (From WandaVision Episode 1Audio Only).mp3" type="audio/mpeg">
+    </audio>
+    <body>
+      <div><img class="imgB1" src = "images/DesktopTest7.png" alt="HTML5 Icon"style="width:1920px;height:1080px;position:absolute; left:0px; top:0px;"></div>
+
+         <div><img class="imgA1" src="images/SignThingFixed.svg" alt="HTML5 Icon"style="width:1000px;height:1000px;"></div>
+        
+    </body>
+    <h2>203</h2>
+    <div id="container">
+    <h3>3,892</h3>
+    <h3>3,892</h3>
+    <h3>3,892</h3>
+  </div>
+    
+ 
+    <div id="container">
+        <h1 id = "demo"></h1>
+        <h1 id = "demo"></h1>
+        <h1 id = "demo"></h1>
+      </div>
+    <p ></p>
