@@ -38,12 +38,29 @@
   var newNow = weekday * 24 * 60 * 60 + currentDate.getHours() * 60 * 60 + currentDate.getMinutes() * 60 + currentDate.getSeconds();
 
   var newDistance;
-  if (currentDate.getHours() >= 9 && weekday >= 5)
+
+  if (weekday > 5)
   {
-    newDistance = 604800 - (currentDate - targetDate);
+    newDistance = 604800 - (targetDate - newNow) //604800 is the amount of seconds in a week
   }
-  else
-  newDistance = targetDate - newNow;
+   else if (weekday < 5)
+   {
+    newDistance = targetDate - newNow
+   }
+    
+else if (weekday == 5)
+{
+  if (currentDate.getHours() >= 9)
+  {
+    newDistance = 604800 - (newNow - targetDate)
+  }
+  else {
+    newDistance = targetDate - newNow
+  }
+  
+}
+    
+
 
 
  var days = Math.floor(newDistance / (60 * 60 * 24))
