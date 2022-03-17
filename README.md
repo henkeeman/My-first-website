@@ -3,3 +3,6 @@ Kombinerade mitt behov av att försöka snabba upp den långa väntan inför nä
 Min magnum opus blev då alltså en countdown till klockan 9 på fredagar. Hemsidan består av 95% silvertejp och 5% HTML, CSS och Javascript.
 
 Verkligen ingenting som gjort på ett bra sätt, men jag sparar den ändå här då jag tycker det är intressant att se vart jag började ^^
+
+
+<p align="center"><img src="https://imgur.com/a/nIm8P0W" alt="Logo" width="200"></p>
