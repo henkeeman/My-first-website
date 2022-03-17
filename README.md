@@ -5,4 +5,4 @@ Min magnum opus blev då alltså en countdown till klockan 9 på fredagar. Hemsi
 Verkligen ingenting som gjort på ett bra sätt, men jag sparar den ändå här då jag tycker det är intressant att se vart jag började ^^
 
 
-<p align="center"><img src="https://imgur.com/a/nIm8P0W" alt="Logo" width="200"></p>
+<p align="center"><img src="https://i.imgur.com/a/nIm8P0W" alt="Logo" width="200"></p>
